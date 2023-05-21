@@ -25,7 +25,6 @@
 
 .main {
   min-width: 929px;
-  padding: 30px 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -35,7 +34,7 @@
 
 .main h1 {
   font-size: 50px;
-  margin-bottom: 10px;
+  margin: 30px 0 10px;
 }
 
 .main h2 {
@@ -107,6 +106,24 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.main .logo-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .logo-menu p {
+  display: flex;
+  align-self: flex-end;
+  margin: 0 0 10px 150px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.main .logo-menu img {
+  margin: 0 0 -50px -100px;
 }
 
 .footer {
