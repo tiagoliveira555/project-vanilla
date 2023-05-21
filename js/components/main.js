@@ -2,6 +2,10 @@ class Main {
   constructor() {
     this.element = document.createElement('div')
     this.element.className = 'main'
+    this.menuInitial()
+  }
+
+  menuInitial() {
     const h1 = document.createElement('h1')
     h1.textContent = 'Seja bem vindo!'
     const h2 = document.createElement('h2')
@@ -11,6 +15,30 @@ class Main {
     this.element.appendChild(h2)
     this.element.appendChild(this.createButtonsMenu())
     this.element.appendChild(this.createLogoMenu())
+  }
+
+  menuCard() {
+    const newElement = document.createElement('div')
+    newElement.className = 'main'
+    const menuCard = new MenuCard()
+    newElement.appendChild(menuCard.element)
+    this.element.replaceWith(newElement)
+  }
+
+  menuQr() {
+    const newElement = document.createElement('div')
+    newElement.className = 'main'
+    const menuQr = new MenuQr()
+    newElement.appendChild(menuQr.element)
+    this.element.replaceWith(newElement)
+  }
+
+  menuBilhete() {
+    const newElement = document.createElement('div')
+    newElement.className = 'main'
+    const menuBilhete = new MenuBilhete()
+    newElement.appendChild(menuBilhete.element)
+    this.element.replaceWith(newElement)
   }
 
   createButtonsMenu() {
@@ -27,6 +55,9 @@ class Main {
     buttonCartao.className = 'button-cartao'
     const buttonCartaoSpan = document.createElement('span')
     buttonCartao.appendChild(buttonCartaoSpan)
+    buttonCartao.addEventListener('click', () => {
+      this.menuCard()
+    })
     return buttonCartao
   }
 
@@ -37,6 +68,9 @@ class Main {
     const buttonQrCodeSpan2 = document.createElement('span')
     buttonQrCode.appendChild(buttonQrCodeSpan1)
     buttonQrCode.appendChild(buttonQrCodeSpan2)
+    buttonQrCode.addEventListener('click', () => {
+      this.menuQr()
+    })
     return buttonQrCode
   }
 
@@ -45,6 +79,9 @@ class Main {
     buttonBilhete.className = 'button-bilhete'
     const buttonBilheteSpan = document.createElement('span')
     buttonBilhete.appendChild(buttonBilheteSpan)
+    buttonBilhete.addEventListener('click', () => {
+      this.menuBilhete()
+    })
     return buttonBilhete
   }
 
@@ -52,7 +89,7 @@ class Main {
     const logoMenu = document.createElement('div')
     logoMenu.className = 'logo-menu'
     const p = document.createElement('p')
-    p.textContent = 'Central de atendimento ao cliente (11)3388-2200'
+    p.textContent = 'Central de atendimento ao cliente (75) 99817-2278'
     const imgLogo = document.createElement('img')
     imgLogo.src = '../img/img1.png'
     imgLogo.alt = 'Logo Menu'

@@ -126,6 +126,18 @@
   margin: 0 0 -50px -100px;
 }
 
+.menu-card {
+  flex: 1;
+}
+
+.menu-qr {
+  flex: 1;
+}
+
+.menu-bilhete {
+  flex: 1;
+}
+
 .footer {
   background-color: var(--primary);
   height: 80px;
