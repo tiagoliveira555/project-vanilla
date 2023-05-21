@@ -59,9 +59,7 @@ export class Main {
     buttonCartao.className = 'button-cartao'
     const buttonCartaoSpan = document.createElement('span')
     buttonCartao.appendChild(buttonCartaoSpan)
-    buttonCartao.addEventListener('click', () => {
-      this.menuCard()
-    })
+    buttonCartao.addEventListener('click', () => this.menuCard())
     return buttonCartao
   }
 
@@ -72,9 +70,7 @@ export class Main {
     const buttonQrCodeSpan2 = document.createElement('span')
     buttonQrCode.appendChild(buttonQrCodeSpan1)
     buttonQrCode.appendChild(buttonQrCodeSpan2)
-    buttonQrCode.addEventListener('click', () => {
-      this.menuQr()
-    })
+    buttonQrCode.addEventListener('click', () => this.menuQr())
     return buttonQrCode
   }
 
@@ -83,9 +79,7 @@ export class Main {
     buttonBilhete.className = 'button-bilhete'
     const buttonBilheteSpan = document.createElement('span')
     buttonBilhete.appendChild(buttonBilheteSpan)
-    buttonBilhete.addEventListener('click', () => {
-      this.menuBilhete()
-    })
+    buttonBilhete.addEventListener('click', () => this.menuBilhete())
     return buttonBilhete
   }
 
