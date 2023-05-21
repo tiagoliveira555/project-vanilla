@@ -1,5 +1,5 @@
-import { Main } from './components/main.js'
-import { Footer } from './components/footer.js'
+import { Main } from './views/main.js'
+import { Footer } from './views/footer.js'
 
 const app = document.querySelector('#app')
 
