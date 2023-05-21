@@ -14,6 +14,8 @@
 #app {
   width: 100vw;
   height: 100vh;
+  color: var(--text);
+  background-color: var(--bg);
 
   display: flex;
   flex-direction: column;
@@ -22,13 +24,92 @@
 }
 
 .main {
-  width: 100%;
-  background-color: var(--bg);
-  flex: 1
+  min-width: 929px;
+  padding: 30px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.main h2 {
+  font-size: 40px;
+}
+
+.main .buttons-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  gap: 30px;
+}
+
+.main .buttons-menu button {
+  background-color: var(--primary);
+  font-size: 30px;
+  width: 200px;
+  height: 180px;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 0 20px 5px #000;
+  transition: all .2s;
+}
+
+.main .buttons-menu button:hover {
+  transform: scale(1.05);
+}
+
+.main .buttons-menu .button-cartao span {
+  display: inline-block;
+  width: 90%;
+  height: 90%;
+  background-image: url('../img/img2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.main .buttons-menu .button-qrcode {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .buttons-menu .button-qrcode span {
+  background-color: var(--text);
+  width: 50%;
+  height: 50%;
+  background-image: url('../img/qr-code.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.main .buttons-menu .button-qrcode span:last-child {
+  background-color: transparent;
+  background-image: url('../img/logo_top.png');
+  margin-bottom: -20px;
+}
+
+.main .buttons-menu .button-bilhete span {
+  display: inline-block;
+  width: 80%;
+  height: 80%;
+  background-image: url('../img/bilhete-unico.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .footer {
-  color: var(--text);
   background-color: var(--primary);
   height: 80px;
   width: 100%;
