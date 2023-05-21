@@ -4,12 +4,12 @@ import { MenuBilhete } from './menu-bilhete.js'
 
 export class Main {
   constructor() {
-    this.element = document.createElement('div')
-    this.element.className = 'main'
     this.menuInitial()
   }
 
   menuInitial() {
+    this.element = document.createElement('div')
+    this.element.className = 'main'
     const h1 = document.createElement('h1')
     h1.textContent = 'Seja bem vindo!'
     const h2 = document.createElement('h2')
