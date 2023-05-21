@@ -1,3 +1,6 @@
+import { Main } from './components/main.js'
+import { Footer } from './components/footer.js'
+
 const app = document.querySelector('#app')
 
 const main = new Main()

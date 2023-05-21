@@ -1,4 +1,4 @@
-class MenuCard {
+export class MenuCard {
   constructor() {
     this.element = document.createElement('div')
     this.element.className = 'main'

@@ -1,4 +1,4 @@
-class MenuBilhete {
+export class MenuBilhete {
   constructor() {
     this.element = document.createElement('div')
     this.element.className = 'main'

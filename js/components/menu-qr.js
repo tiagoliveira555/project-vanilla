@@ -1,4 +1,4 @@
-class MenuQr {
+export class MenuQr {
   constructor() {
     this.element = document.createElement('div')
     this.element.className = 'main'

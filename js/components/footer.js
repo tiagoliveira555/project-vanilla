@@ -1,4 +1,4 @@
-class Footer {
+export class Footer {
   constructor() {
     this.element = document.createElement('footer')
     this.element.className = 'footer'
@@ -14,7 +14,7 @@ class Footer {
     const logo = document.createElement('div')
     logo.className = 'logo'
     const logoImg = document.createElement('img')
-    logoImg.src = '../img/logo_top.png'
+    logoImg.src = 'img/logo_top.png'
     const terminalVersion = document.createElement('div')
     const terminal = document.createElement('p')
     const version = document.createElement('p')
@@ -55,13 +55,13 @@ class Footer {
     const logoFlags = document.createElement('div')
     logoFlags.className = 'logo_flags'
     const visa = document.createElement('img')
-    visa.src = '../img/visa.png'
+    visa.src = 'img/visa.png'
     visa.alt = 'Visa'
     const mastercard = document.createElement('img')
-    mastercard.src = '../img/mastercard.png'
+    mastercard.src = 'img/mastercard.png'
     mastercard.alt = 'Mastercard'
     const elo = document.createElement('img')
-    elo.src = '../img/elo.png'
+    elo.src = 'img/elo.png'
     elo.alt = 'Elo'
     logoFlags.appendChild(visa)
     logoFlags.appendChild(mastercard)

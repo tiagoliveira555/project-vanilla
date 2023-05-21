@@ -1,4 +1,8 @@
-class Main {
+import { MenuCard } from './menu-card.js'
+import { MenuQr } from './menu-qr.js'
+import { MenuBilhete } from './menu-bilhete.js'
+
+export class Main {
   constructor() {
     this.element = document.createElement('div')
     this.element.className = 'main'
@@ -91,7 +95,7 @@ class Main {
     const p = document.createElement('p')
     p.textContent = 'Central de atendimento ao cliente (75) 99817-2278'
     const imgLogo = document.createElement('img')
-    imgLogo.src = '../img/img1.png'
+    imgLogo.src = 'img/img1.png'
     imgLogo.alt = 'Logo Menu'
     logoMenu.appendChild(p)
     logoMenu.appendChild(imgLogo)
