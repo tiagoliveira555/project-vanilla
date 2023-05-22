@@ -22,27 +22,28 @@ export class Main {
   }
 
   menuCard() {
-    const newElement = document.createElement('div')
-    newElement.className = 'main'
+    this.element.remove()
     const menuCard = new MenuCard()
-    newElement.appendChild(menuCard.element)
-    this.element.replaceWith(newElement)
+    this.element.appendChild(menuCard.element)
+    const app = document.querySelector('#app')
+    const footer = document.querySelector('.footer')
+    app.insertBefore(menuCard.element, footer)
   }
 
   menuQr() {
-    const newElement = document.createElement('div')
-    newElement.className = 'main'
+    this.element.remove()
     const menuQr = new MenuQr()
-    newElement.appendChild(menuQr.element)
-    this.element.replaceWith(newElement)
+    const app = document.querySelector('#app')
+    const footer = document.querySelector('.footer')
+    app.insertBefore(menuQr.element, footer)
   }
 
   menuBilhete() {
-    const newElement = document.createElement('div')
-    newElement.className = 'main'
+    this.element.remove()
     const menuBilhete = new MenuBilhete()
-    newElement.appendChild(menuBilhete.element)
-    this.element.replaceWith(newElement)
+    const app = document.querySelector('#app')
+    const footer = document.querySelector('.footer')
+    app.insertBefore(menuBilhete.element, footer)
   }
 
   createButtonsMenu() {
