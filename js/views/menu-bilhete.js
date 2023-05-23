@@ -1,4 +1,5 @@
 import { Button } from "../components/button.js"
+import { FooterButtons } from "../components/footer-buttons.js"
 import { Main } from "./main.js"
 
 export class MenuBilhete {
@@ -9,13 +10,16 @@ export class MenuBilhete {
     h1.textContent = 'Selecione o tipo de recarga'
     const div = document.createElement('div')
     div.className = 'menu-bilhete'
-    const divButtons = document.createElement('div')
-    divButtons.className = 'buttons'
-    const buttonBack = new Button('Voltar', 'button-back')
-    divButtons.appendChild(buttonBack.element)
+    this.footerButtons = new FooterButtons('footer-buttons')
+    this.footerButtons.addChildren(this.createButtonBack())
     this.element.appendChild(h1)
     this.element.appendChild(div)
-    this.element.appendChild(divButtons)
+    this.element.appendChild(this.footerButtons.element)
+  }
+
+  createButtonBack() {
+    const buttonBack = new Button('Voltar', 'button-back')
     buttonBack.addListener(() => this.element.replaceWith(new Main().element))
+    return buttonBack.element
   }
 }
