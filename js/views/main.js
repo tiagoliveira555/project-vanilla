@@ -14,7 +14,6 @@ export class Main {
     h1.textContent = 'Seja bem vindo!'
     const h2 = document.createElement('h2')
     h2.textContent = 'Insira seu cartão ou selecione seu produto!'
-
     this.element.appendChild(h1)
     this.element.appendChild(h2)
     this.element.appendChild(this.createButtonsMenu())
@@ -24,7 +23,6 @@ export class Main {
   menuCard() {
     this.element.remove()
     const menuCard = new MenuCard()
-    this.element.appendChild(menuCard.element)
     const app = document.querySelector('#app')
     const footer = document.querySelector('.footer')
     app.insertBefore(menuCard.element, footer)
